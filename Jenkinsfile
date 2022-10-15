@@ -1,5 +1,5 @@
 def CONTAINER_NAME="samplewebapp"
-def CONTAINER_TAG="latest"
+def CONTAINER_TAG="v1"
 def DOCKER_HUB_USER="rakesh1533"
 def HTTP_PORT="8090"
 
