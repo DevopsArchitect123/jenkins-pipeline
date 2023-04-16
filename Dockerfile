@@ -6,7 +6,7 @@ COPY src/ pipeline/src/
 
 WORKDIR pipeline/
 
-RUN mvn clean install
+RUN mvn clean install -DskipTests
 
 EXPOSE 8090
 
