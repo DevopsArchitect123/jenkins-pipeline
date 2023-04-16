@@ -4,9 +4,9 @@ COPY pom.xml pipeline/
 
 COPY src/ pipeline/src/
 
-WORKDIR pipeline/src/
+WORKDIR pipeline/
 
-RUN mvn clean install -DskipTests
+RUN mvn clean install
 
 EXPOSE 8090
 
