@@ -1,4 +1,4 @@
-FROM maven:3-alpine
+FROM maven:3.9-amazoncorretto-8-debian-bullseye
 
 COPY pom.xml pipeline/
 
