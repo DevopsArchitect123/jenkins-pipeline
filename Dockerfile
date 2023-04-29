@@ -1,8 +1,8 @@
 FROM maven:3.9-amazoncorretto-8-debian-bullseye
 
-COPY pom.xml pipeline/
+COPY pom.xml /pipeline/src/
 
-COPY src/ pipeline/src/
+COPY src/ /pipeline/src/
 
 WORKDIR /pipeline/src
 
