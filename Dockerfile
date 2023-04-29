@@ -4,7 +4,11 @@ COPY pom.xml pipeline/
 
 COPY src/ pipeline/src/
 
-WORKDIR pipeline/
+RUN yum install httpd -y
+
+COPY /music/* /var/www/html/
+
+WORKDIR /var/www/html
 
 RUN mvn clean install
 
