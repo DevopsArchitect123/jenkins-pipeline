@@ -1,14 +1,14 @@
-FROM centos:7
+FROM maven:3.9-amazoncorretto-8-debian-bullseye
 
-RUN yum install httpd -y
+COPY pom.xml pipeline/
 
-RUN service httpd start
+COPY src/ pipeline/src/
 
-WORKDIR /var/www/html
+WORKDIR /pipeline/src
 
-COPY /music/* /var/www/html/
+RUN mvn clean install
 
 EXPOSE 8090
 
-
+ENTRYPOINT [ "java", "-jar", "/pipeline/target/jenkins-pipeline.jar"]
 
