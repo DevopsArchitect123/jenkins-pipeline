@@ -1,10 +1,10 @@
 FROM maven:3.9-amazoncorretto-8-debian-bullseye
 
-COPY pom.xml /pipeline/src/
+COPY pom.xml pipeline/
 
-COPY src/ /pipeline/src/
+COPY src/ pipeline/src/
 
-WORKDIR /pipeline/src
+WORKDIR pipeline/
 
 RUN mvn clean install
 
