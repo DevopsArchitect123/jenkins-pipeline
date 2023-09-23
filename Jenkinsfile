@@ -1,4 +1,4 @@
-def CONTAINER_NAME="fridayfun"
+def CONTAINER_NAME="webapp"
 def CONTAINER_TAG="latest"
 def DOCKER_HUB_USER="rakesh1533"
 def HTTP_PORT="8090"
