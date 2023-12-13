@@ -1,4 +1,4 @@
-def CONTAINER_NAME="ltmetro"
+def CONTAINER_NAME="tesla"
 def CONTAINER_TAG="latest"
 def DOCKER_HUB_USER="rakesh1533"
 def HTTP_PORT="8090"
@@ -36,7 +36,7 @@ node {
     }
 
     stage('Push to Docker Registry'){
-        withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+        withCredentials([usernamePassword(credentialsId: 'dockerlogin', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             pushToImage(CONTAINER_NAME, CONTAINER_TAG, USERNAME, PASSWORD)
         }
     }
